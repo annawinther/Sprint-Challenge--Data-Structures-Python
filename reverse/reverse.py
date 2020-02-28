@@ -46,8 +46,19 @@ class LinkedList:
     # TO BE COMPLETED
     # 1 --> 2 --> 3 --> None
     # 3 --> 2 --> 1 --> None
-    # if the head isn't None:
-      # set the surrent node to the head
-      # then set a next node variable to be the next of the current
-      # the current node new next to be none
-    pass
+
+    # set the current node to the head and start with setting the prev to be none as ther are no previous
+    current_node = self.head
+    prev = None
+    # loop over while the head isn't none
+    while current_node:
+      # set the next to be the next of the current node's next node in the list
+      # set the current node's next node to be the previous
+      # set the previous to be the current node
+      # and then set the current node to be the next
+      pass
+    # once finished update the head to be the previous
+    self.head = prev
+    
+
+   
