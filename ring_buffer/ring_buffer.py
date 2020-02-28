@@ -18,15 +18,17 @@ class RingBuffer:
             self.current = self.storage.tail
         # if it is at capacity then swap the oldest one (head) with the new that we want to add. 
         else:
-            if self.storage.length == self.capacity:
+            if self.current == self.storage.tail:
                 # set the current to be the head we want to swap with the new vlaue
                 self.current = self.storage.head
+                # self.storage.remove_from_head()
+                # self.storage.add_to_tail(item)
             # otherwise
             else:
                 # set current to be the next one
                 self.current = self.current.next
                 # set the item to be the new value of the current
-                self.current.value = item
+            self.current.value = item
 
     def get(self):
         # Note:  This is the only [] allowed
