@@ -23,18 +23,18 @@ duplicates = []  # Return the list of duplicates in this data structure
 # NEW SOLUTION 
 
 # initialize a bst using the Binary Search Tree created earlier this week, passing in the value as the first item in names_1
-bst = BinarySearchTree(names_1[0])
-# for each name in namaes_1 
-for name in names_1:
-    # insert it into the bst
-    bst.insert(name)
+# bst = BinarySearchTree(names_1[0])
+# # for each name in namaes_1 
+# for name in names_1:
+#     # insert it into the bst
+#     bst.insert(name)
 
-# for each name in nmaes_2
-for name in names_2:
-    # if the bts contains the name
-    if bst.contains(name):
-        # use duplicates.append(name)
-        duplicates.append(name)
+# # for each name in nmaes_2
+# for name in names_2:
+#     # if the bts contains the name
+#     if bst.contains(name):
+#         # use duplicates.append(name)
+#         duplicates.append(name)
 
 # using this solution runs in 0.10642290115356445 seconds
 # uses O(n) --> its linear
@@ -47,3 +47,10 @@ print (f"runtime: {end_time - start_time} seconds")
 # Python has built-in tools that allow for a very efficient approach to this problem
 # What's the best time you can accomplish?  Thare are no restrictions on techniques or data
 # structures, but you may not import any additional libraries that you did not write yourself.
+
+# use set and intersection on list
+# set() the larger list and then use the built-in function called interscetion() to compute the intersected list. intersection() is a first-class part of set.
+
+list(set(names_1).intersection(names_2))
+
+ # 0.0030982494354248047 seconds frist time it ran!
