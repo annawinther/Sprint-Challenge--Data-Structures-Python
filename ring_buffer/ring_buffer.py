@@ -21,8 +21,6 @@ class RingBuffer:
             if self.current == self.storage.tail:
                 # set the current to be the head we want to swap with the new vlaue
                 self.current = self.storage.head
-                # self.storage.remove_from_head()
-                # self.storage.add_to_tail(item)
             # otherwise
             else:
                 # set current to be the next one
