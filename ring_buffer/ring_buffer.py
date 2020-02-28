@@ -8,7 +8,8 @@ class RingBuffer:
         self.storage = DoublyLinkedList()
 
     def append(self, item):
-        
+        # if its not at capacity yet, keep filling in adding the next one
+        # if it is at capacity then swap the oldest one (head) with the new that we want to add. 
         pass
 
     def get(self):
@@ -16,6 +17,9 @@ class RingBuffer:
         list_buffer_contents = []
 
         # TODO: Your code here
+        # start at the beginning by setting the node to be the head
+        # loop over as long as there is a node passing in and adding that noe's value to the list_buffer_contents
+        # then set the neode to be the next one
 
         return list_buffer_contents
 
